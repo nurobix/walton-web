@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de confidentialite — Walton</title>
+    <meta name="description" content="Politique de confidentialite de l'application Walton. Decouvrez comment vos donnees sont traitees et protegees.">
+    <meta name="theme-color" content="#0a3d38">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav nav--scrolled" id="nav">
+        <div class="nav__container">
+            <a href="index.html" class="nav__logo">
+                <svg class="nav__logo-icon" viewBox="0 0 32 32" width="32" height="32" fill="none">
+                    <circle cx="16" cy="16" r="16" fill="#5dcaa5"/>
+                    <path d="M10 22c2-4 4-8 6-6s4 6 6 2" stroke="#0a3d38" stroke-width="2.5" stroke-linecap="round"/>
+                    <circle cx="24" cy="12" r="2" fill="#0a3d38"/>
+                </svg>
+                <span>Walton</span>
+            </a>
+            <button class="nav__toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#fonctionnalites">Fonctionnalites</a></li>
+                <li><a href="index.html#telechargement" class="btn btn--nav">Telecharger</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="legal-hero">
+        <div class="container">
+            <h1 class="legal-hero__title">Politique de confidentialite</h1>
+            <p class="legal-hero__date">Derniere mise a jour : 30 mars 2026</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="legal">
+        <div class="container">
+            <div class="legal__content">
+
+                <section class="legal__section">
+                    <h2>1. Introduction</h2>
+                    <p>Walton (ci-apres "l'Application") est editee par Nurobix (ci-apres "nous", "notre"). La presente politique de confidentialite decrit comment nous collectons, utilisons et protegeons vos donnees personnelles lorsque vous utilisez notre application mobile.</p>
+                    <p>Nous nous engageons a respecter votre vie privee et a proteger vos donnees conformement au Reglement General sur la Protection des Donnees (RGPD) et a la loi Informatique et Libertes.</p>
+                </section>
+
+                <section class="legal__section">
+                    <h2>2. Donnees collectees</h2>
+
+                    <h3>2.1 Phase 1 — Application sans backend</h3>
+                    <p>En Phase 1, Walton fonctionne <strong>integralement en local</strong> sur votre appareil. Aucune donnee personnelle n'est envoyee vers nos serveurs.</p>
+                    <p>Les donnees suivantes sont stockees <strong>exclusivement sur votre telephone</strong> :</p>
+                    <ul>
+                        <li><strong>Spots de peche</strong> — coordonnees GPS, nom, type de peche, notes et photos que vous enregistrez.</li>
+                        <li><strong>Carnet de touches</strong> — espece, poids, taille, photo, ainsi que les conditions meteo, debit Vigicrues et phase lunaire capturees automatiquement au moment de l'enregistrement.</li>
+                        <li><strong>Stations favorites</strong> — identifiants des stations Vigicrues que vous ajoutez en favoris.</li>
+                        <li><strong>Preferences</strong> — type de peche favori, unites de mesure et autres reglages.</li>
+                    </ul>
+                    <p>Ces donnees ne quittent jamais votre appareil. Elles ne sont ni transmises, ni partagees, ni accessibles par Nurobix ou par des tiers.</p>
+
+                    <h3>2.2 Phase 2 — Application avec backend (apres creation de compte)</h3>
+                    <p>Si vous choisissez de creer un compte (fonctionnalite optionnelle introduite en Phase 2), les donnees suivantes seront collectees et stockees sur nos serveurs (heberges via Supabase) :</p>
+                    <ul>
+                        <li><strong>Donnees de compte</strong> — adresse e-mail, identifiant unique.</li>
+                        <li><strong>Spots et prises synchronisees</strong> — les memes donnees que celles stockees localement, avec un identifiant utilisateur associe.</li>
+                        <li><strong>Donnees d'abonnement</strong> — gerees par RevenueCat, qui traite les transactions via l'App Store ou Google Play. Nous ne stockons pas vos informations de paiement.</li>
+                    </ul>
+                </section>
+
+                <section class="legal__section">
+                    <h2>3. Donnees de localisation</h2>
+                    <p>Walton utilise la geolocalisation de votre appareil pour :</p>
+                    <ul>
+                        <li>Afficher les conditions meteo a votre position.</li>
+                        <li>Localiser les stations Vigicrues, spots publics et acces a proximite.</li>
+                        <li>Detecter votre departement pour la reglementation de peche.</li>
+                        <li>Associer une position GPS a vos spots et prises.</li>
+                    </ul>
+                    <p>L'acces a la localisation est demande explicitement au premier lancement. Vous pouvez le revoquer a tout moment dans les reglages de votre telephone.</p>
+                    <p><strong>En Phase 1</strong>, vos coordonnees GPS ne sont jamais transmises a un serveur distant. Elles sont traitees localement sur votre appareil.</p>
+                    <p><strong>Le GPS n'est utilise qu'en premier plan</strong> (foreground). Walton ne vous localise jamais en arriere-plan.</p>
+                </section>
+
+                <section class="legal__section">
+                    <h2>4. Services tiers</h2>
+                    <p>Walton communique avec les services tiers suivants pour fonctionner :</p>
+
+                    <div class="legal__table-wrap">
+                        <table class="legal__table">
+                            <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Donnees transmises</th>
+                                    <th>Finalite</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Open-Meteo</td>
+                                    <td>Coordonnees GPS (latitude, longitude)</td>
+                                    <td>Obtenir les previsions meteo a votre position</td>
+                                </tr>
+                                <tr>
+                                    <td>Vigicrues / Hub'Eau</td>
+                                    <td>Identifiant de station, coordonnees GPS</td>
+                                    <td>Afficher les debits des cours d'eau</td>
+                                </tr>
+                                <tr>
+                                    <td>OpenStreetMap / Overpass API</td>
+                                    <td>Zone geographique (bbox)</td>
+                                    <td>Charger les spots publics et acces</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>Ces services recoivent uniquement les donnees strictement necessaires a leur fonctionnement (coordonnees geographiques). Aucune donnee personnelle identifiante (nom, e-mail, identifiant) ne leur est transmise.</p>
+
+                    <h3>4.1 Services tiers en Phase 2</h3>
+                    <p>En Phase 2, les services suivants peuvent etre utilises en complement :</p>
+                    <ul>
+                        <li><strong>Supabase</strong> — hebergement des donnees de compte et synchronisation.</li>
+                        <li><strong>RevenueCat</strong> — gestion des abonnements premium.</li>
+                        <li><strong>Google AdMob</strong> — affichage de publicites discretes (utilisateurs gratuits uniquement). Le consentement est demande prealablement (ATT sur iOS, GDPR consent sur Android).</li>
+                    </ul>
+                </section>
+
+                <section class="legal__section">
+                    <h2>5. Partage de donnees</h2>
+                    <p>Walton ne partage, ne vend et ne loue aucune de vos donnees personnelles a des tiers.</p>
+                    <p>La fonctionnalite de partage de prise genere une carte visuelle <strong>entierement sur votre telephone</strong>. L'image est partagee via le systeme natif de votre appareil (iOS/Android). Aucune donnee ne transite par nos serveurs.</p>
+                    <p><strong>Les coordonnees GPS de vos spots ne sont jamais incluses dans les cartes de partage.</strong></p>
+                </section>
+
+                <section class="legal__section">
+                    <h2>6. Stockage et securite</h2>
+                    <p><strong>Phase 1 :</strong> toutes les donnees sont stockees dans une base SQLite locale sur votre appareil. Elles sont protegees par les mecanismes de securite natifs de votre systeme d'exploitation (iOS/Android).</p>
+                    <p><strong>Phase 2 :</strong> les donnees synchronisees sont stockees sur des serveurs Supabase securises, avec chiffrement en transit (TLS) et au repos. L'acces aux donnees est controle par des regles de securite au niveau des lignes (Row Level Security) garantissant que seul l'utilisateur proprietaire peut acceder a ses donnees.</p>
+                </section>
+
+                <section class="legal__section">
+                    <h2>7. Conservation des donnees</h2>
+                    <p><strong>Phase 1 :</strong> vos donnees restent sur votre appareil aussi longtemps que l'application est installee. La desinstallation de l'application supprime definitivement toutes les donnees.</p>
+                    <p><strong>Phase 2 :</strong> les donnees synchronisees sur le cloud sont conservees tant que votre compte est actif. Vous pouvez demander la suppression de votre compte et de toutes les donnees associees a tout moment.</p>
+                </section>
+
+                <section class="legal__section">
+                    <h2>8. Vos droits (RGPD)</h2>
+                    <p>Conformement au RGPD, vous disposez des droits suivants :</p>
+                    <ul>
+                        <li><strong>Droit d'acces</strong> — obtenir une copie de vos donnees personnelles.</li>
+                        <li><strong>Droit de rectification</strong> — corriger des donnees inexactes.</li>
+                        <li><strong>Droit a l'effacement</strong> — demander la suppression de vos donnees.</li>
+                        <li><strong>Droit a la portabilite</strong> — recevoir vos donnees dans un format structure et lisible.</li>
+                        <li><strong>Droit d'opposition</strong> — vous opposer au traitement de vos donnees.</li>
+                        <li><strong>Droit a la limitation</strong> — restreindre le traitement de vos donnees.</li>
+                    </ul>
+                    <p>En Phase 1, l'ensemble de vos donnees etant stocke localement, vous exercez ces droits directement sur votre appareil (modification, suppression).</p>
+                    <p>En Phase 2, pour exercer vos droits, contactez-nous a l'adresse : <strong>privacy@walton-app.fr</strong></p>
+                </section>
+
+                <section class="legal__section">
+                    <h2>9. Donnees des mineurs</h2>
+                    <p>Walton n'est pas destine aux enfants de moins de 16 ans. Nous ne collectons pas sciemment de donnees personnelles de mineurs de moins de 16 ans. Si vous etes parent ou tuteur et pensez que votre enfant nous a fourni des donnees personnelles, contactez-nous pour que nous puissions les supprimer.</p>
+                </section>
+
+                <section class="legal__section">
+                    <h2>10. Modifications de cette politique</h2>
+                    <p>Nous pouvons mettre a jour cette politique de confidentialite de temps a autre. Toute modification sera publiee sur cette page avec une date de mise a jour revisee. En cas de modification substantielle, une notification sera affichee dans l'application.</p>
+                </section>
+
+                <section class="legal__section">
+                    <h2>11. Contact</h2>
+                    <p>Pour toute question relative a cette politique de confidentialite ou a la protection de vos donnees :</p>
+                    <ul>
+                        <li>E-mail : <strong>privacy@walton-app.fr</strong></li>
+                        <li>Editeur : Nurobix</li>
+                    </ul>
+                    <p>Vous avez egalement le droit de deposer une reclamation aupres de la CNIL (Commission Nationale de l'Informatique et des Libertes) si vous estimez que le traitement de vos donnees n'est pas conforme a la reglementation.</p>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <svg class="footer__logo" viewBox="0 0 32 32" width="28" height="28" fill="none">
+                        <circle cx="16" cy="16" r="16" fill="#5dcaa5"/>
+                        <path d="M10 22c2-4 4-8 6-6s4 6 6 2" stroke="#0a3d38" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="24" cy="12" r="2" fill="#0a3d38"/>
+                    </svg>
+                    <span>Walton</span>
+                </div>
+                <div class="footer__links">
+                    <a href="privacy.html">Politique de confidentialite</a>
+                    <a href="terms.html">Conditions d'utilisation</a>
+                    <a href="mailto:contact@walton-app.fr">Contact</a>
+                </div>
+                <p class="footer__copy">&copy; 2026 Walton. Concu en France pour les pecheurs francais.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

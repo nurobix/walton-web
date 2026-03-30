@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walton — L'app tout-en-un des pêcheurs français</title>
+    <meta name="description" content="Walton regroupe météo pêche, débits rivières, gestion de spots et carnet de touches en une seule application. 100% gratuite, 100% hors-ligne.">
+    <meta name="theme-color" content="#0a3d38">
+    <meta property="og:title" content="Walton — L'app tout-en-un des pêcheurs français">
+    <meta property="og:description" content="Météo pêche, débits rivières Vigicrues, spots géolocalisés et carnet de touches. Gratuite et hors-ligne.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/og-image.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav__container">
+            <a href="#" class="nav__logo">
+                <svg class="nav__logo-icon" viewBox="0 0 32 32" width="32" height="32" fill="none">
+                    <circle cx="16" cy="16" r="16" fill="#5dcaa5"/>
+                    <path d="M10 22c2-4 4-8 6-6s4 6 6 2" stroke="#0a3d38" stroke-width="2.5" stroke-linecap="round"/>
+                    <circle cx="24" cy="12" r="2" fill="#0a3d38"/>
+                </svg>
+                <span>Walton</span>
+            </a>
+            <button class="nav__toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="#fonctionnalites">Fonctionnalites</a></li>
+                <li><a href="#comment-ca-marche">Comment ca marche</a></li>
+                <li><a href="#pourquoi">Pourquoi Walton</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#telechargement" class="btn btn--nav">Telecharger</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="hero">
+        <div class="hero__bg">
+            <div class="hero__gradient"></div>
+        </div>
+        <div class="hero__container">
+            <div class="hero__content">
+                <div class="hero__badge">100% gratuit &middot; Sans pub &middot; Hors-ligne</div>
+                <h1 class="hero__title">Toute votre peche<br><span class="hero__accent">dans une seule app</span></h1>
+                <p class="hero__subtitle">
+                    Meteo, debits Vigicrues, spots prives et carnet de touches.
+                    Walton remplace vos 5 applis par une seule, concue pour les pecheurs francais.
+                </p>
+                <div class="hero__cta">
+                    <a href="#telechargement" class="btn btn--primary btn--lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Telecharger gratuitement
+                    </a>
+                    <a href="#fonctionnalites" class="btn btn--ghost btn--lg">Decouvrir</a>
+                </div>
+                <div class="hero__stats">
+                    <div class="hero__stat">
+                        <span class="hero__stat-value">0&euro;</span>
+                        <span class="hero__stat-label">Cout total</span>
+                    </div>
+                    <div class="hero__stat-sep"></div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-value">100%</span>
+                        <span class="hero__stat-label">Hors-ligne</span>
+                    </div>
+                    <div class="hero__stat-sep"></div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-value">1 700+</span>
+                        <span class="hero__stat-label">Stations Vigicrues</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__visual">
+                <div class="phone-mockup">
+                    <div class="phone-mockup__frame">
+                        <div class="phone-mockup__notch"></div>
+                        <div class="phone-mockup__screen">
+                            <div class="mock-app">
+                                <div class="mock-app__header">
+                                    <span class="mock-app__greeting">Bonjour, pecheur</span>
+                                    <span class="mock-app__location">Annecy, 74</span>
+                                </div>
+                                <div class="mock-app__weather">
+                                    <div class="mock-app__weather-main">
+                                        <span class="mock-app__temp">14&deg;</span>
+                                        <span class="mock-app__weather-icon">
+                                            <svg viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="8" fill="#fbbf24"/><g stroke="#fbbf24" stroke-width="2" stroke-linecap="round"><line x1="20" y1="4" x2="20" y2="8"/><line x1="20" y1="32" x2="20" y2="36"/><line x1="4" y1="20" x2="8" y2="20"/><line x1="32" y1="20" x2="36" y2="20"/><line x1="8.7" y1="8.7" x2="11.5" y2="11.5"/><line x1="28.5" y1="28.5" x2="31.3" y2="31.3"/><line x1="8.7" y1="31.3" x2="11.5" y2="28.5"/><line x1="28.5" y1="11.5" x2="31.3" y2="8.7"/></g></svg>
+                                        </span>
+                                    </div>
+                                    <div class="mock-app__weather-details">
+                                        <span>Vent 12 km/h NE</span>
+                                        <span>Pression 1018 hPa &uarr;</span>
+                                    </div>
+                                </div>
+                                <div class="mock-app__card">
+                                    <div class="mock-app__card-title">Station Vigicrues</div>
+                                    <div class="mock-app__card-station">Le Fier a Dingy</div>
+                                    <div class="mock-app__card-debit">
+                                        <span class="mock-app__debit-value">8.4 m&sup3;/s</span>
+                                        <span class="mock-app__debit-badge mock-app__debit-badge--ok">Favorable</span>
+                                    </div>
+                                </div>
+                                <div class="mock-app__card mock-app__card--moon">
+                                    <div class="mock-app__card-title">Phase lunaire</div>
+                                    <div class="mock-app__moon-row">
+                                        <span class="mock-app__moon-icon">&#127765;</span>
+                                        <div>
+                                            <div class="mock-app__moon-phase">Pleine lune</div>
+                                            <div class="mock-app__moon-detail">98% &middot; Excellente activite nocturne</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mock-app__nav">
+                                    <span class="mock-app__nav-item mock-app__nav-item--active">Accueil</span>
+                                    <span class="mock-app__nav-item">Carte</span>
+                                    <span class="mock-app__nav-item">Carnet</span>
+                                    <span class="mock-app__nav-item">Reglements</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bandeau probleme -->
+    <section class="problem">
+        <div class="container">
+            <div class="problem__grid">
+                <div class="problem__item">
+                    <div class="problem__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 110-14h.5"/><path d="M22 10a3 3 0 00-3-3h-1a5 5 0 00-5 5v0a5 5 0 005 5h1"/></svg>
+                    </div>
+                    <span>Une appli meteo</span>
+                </div>
+                <div class="problem__plus">+</div>
+                <div class="problem__item">
+                    <div class="problem__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/></svg>
+                    </div>
+                    <span>Vigicrues</span>
+                </div>
+                <div class="problem__plus">+</div>
+                <div class="problem__item">
+                    <div class="problem__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <span>Google Maps</span>
+                </div>
+                <div class="problem__plus">+</div>
+                <div class="problem__item">
+                    <div class="problem__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+                    </div>
+                    <span>Carnet papier</span>
+                </div>
+                <div class="problem__equals">=</div>
+                <div class="problem__item problem__item--walton">
+                    <div class="problem__icon problem__icon--walton">
+                        <svg viewBox="0 0 32 32" width="24" height="24" fill="none"><circle cx="16" cy="16" r="16" fill="#5dcaa5"/><path d="M10 22c2-4 4-8 6-6s4 6 6 2" stroke="#0a3d38" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="12" r="2" fill="#0a3d38"/></svg>
+                    </div>
+                    <span>Walton</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fonctionnalites -->
+    <section class="features" id="fonctionnalites">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tout ce dont vous avez besoin, au bord de l'eau</h2>
+                <p class="section-subtitle">Six fonctionnalites essentielles reunies dans une interface simple et rapide.</p>
+            </div>
+            <div class="features__grid">
+                <div class="feature-card">
+                    <div class="feature-card__icon feature-card__icon--weather">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    </div>
+                    <h3 class="feature-card__title">Meteo peche</h3>
+                    <p class="feature-card__desc">Temperature, vent, pression atmospherique et tendance sur 3h. Previsions heure par heure et sur 5 jours. Phase lunaire incluse.</p>
+                    <ul class="feature-card__tags">
+                        <li>Open-Meteo</li>
+                        <li>Pression 3h</li>
+                        <li>Phase lunaire</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon feature-card__icon--river">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6c4-2 6 2 10 0s6-2 10 0"/><path d="M2 12c4-2 6 2 10 0s6-2 10 0"/><path d="M2 18c4-2 6 2 10 0s6-2 10 0"/></svg>
+                    </div>
+                    <h3 class="feature-card__title">Debits Vigicrues</h3>
+                    <p class="feature-card__desc">1 700+ stations en France. Graphique des 7 derniers jours, code couleur vert/orange/rouge et alertes sur vos stations favorites.</p>
+                    <ul class="feature-card__tags">
+                        <li>Temps reel</li>
+                        <li>Graphiques</li>
+                        <li>Favoris</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon feature-card__icon--spots">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h3 class="feature-card__title">Spots prives</h3>
+                    <p class="feature-card__desc">Enregistrez vos coins de peche en un tap. 100% prives, jamais partages, jamais envoyes sur un serveur. Filtrez par type de peche.</p>
+                    <ul class="feature-card__tags">
+                        <li>Geolocalisees</li>
+                        <li>100% prives</li>
+                        <li>Hors-ligne</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon feature-card__icon--log">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
+                    <h3 class="feature-card__title">Carnet de touches</h3>
+                    <p class="feature-card__desc">Loguez chaque prise avec photo, espece, poids et taille. Meteo, debit et phase lunaire captures automatiquement.</p>
+                    <ul class="feature-card__tags">
+                        <li>Photos</li>
+                        <li>Auto-meteo</li>
+                        <li>Illimite</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon feature-card__icon--map">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+                    </div>
+                    <h3 class="feature-card__title">Carte & acces</h3>
+                    <p class="feature-card__desc">Spots publics OpenStreetMap, mises a l'eau, parkings et acces aux berges. Telechargez la zone pour un acces hors-ligne complet.</p>
+                    <ul class="feature-card__tags">
+                        <li>OSM</li>
+                        <li>Parkings</li>
+                        <li>Hors-ligne</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon feature-card__icon--rules">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3 class="feature-card__title">Reglementation</h3>
+                    <p class="feature-card__desc">Detection automatique de votre departement. Lien direct vers la FDAAPPMA locale et calendrier des ouvertures par categorie.</p>
+                    <ul class="feature-card__tags">
+                        <li>GPS auto</li>
+                        <li>FDAAPPMA</li>
+                        <li>Ouvertures</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comment ca marche -->
+    <section class="how-it-works" id="comment-ca-marche">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pret en 30 secondes</h2>
+                <p class="section-subtitle">Pas de compte a creer. Pas de configuration. Installez et partez pecher.</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step__number">1</div>
+                    <div class="step__content">
+                        <h3>Telechargez</h3>
+                        <p>Gratuit sur App Store et Google Play. Aucun compte requis.</p>
+                    </div>
+                </div>
+                <div class="step__line"></div>
+                <div class="step">
+                    <div class="step__number">2</div>
+                    <div class="step__content">
+                        <h3>Autorisez la localisation</h3>
+                        <p>Walton detecte votre position pour afficher les donnees pertinentes autour de vous.</p>
+                    </div>
+                </div>
+                <div class="step__line"></div>
+                <div class="step">
+                    <div class="step__number">3</div>
+                    <div class="step__content">
+                        <h3>Pechez</h3>
+                        <p>Meteo, debits, spots et carnet — tout est la, meme sans reseau.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pourquoi Walton -->
+    <section class="why" id="pourquoi">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pourquoi Walton ?</h2>
+                <p class="section-subtitle">Concue par des pecheurs, pour des pecheurs. Pas un reseau social, un outil de terrain.</p>
+            </div>
+            <div class="why__grid">
+                <div class="why__card">
+                    <div class="why__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    </div>
+                    <h3>Vos spots restent secrets</h3>
+                    <p>Contrairement a Fishbrain ou les spots sont publics par defaut, Walton garde vos coins de peche 100% prives. Jamais partages, jamais sur un serveur.</p>
+                </div>
+                <div class="why__card">
+                    <div class="why__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 016.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                    </div>
+                    <h3>Fonctionne sans reseau</h3>
+                    <p>En montagne, au bord d'un lac perdu, ou les autres applis ne servent plus a rien. Carte, spots et dernieres donnees disponibles hors-ligne.</p>
+                </div>
+                <div class="why__card">
+                    <div class="why__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                    </div>
+                    <h3>100% francais</h3>
+                    <p>Donnees Vigicrues, modeles Meteo-France via Open-Meteo, reglementation FDAAPPMA. Pense pour les cours d'eau et lacs francais.</p>
+                </div>
+                <div class="why__card">
+                    <div class="why__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                    </div>
+                    <h3>Vraiment gratuit</h3>
+                    <p>Pas de pub, pas d'abonnement cache, pas de version "lite" limitee. Toutes les fonctionnalites sont accessibles des le premier lancement.</p>
+                </div>
+            </div>
+
+            <!-- Comparaison -->
+            <div class="comparison">
+                <h3 class="comparison__title">Walton vs. la concurrence</h3>
+                <div class="comparison__table-wrap">
+                    <table class="comparison__table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="comparison__highlight">Walton</th>
+                                <th>Fishbrain</th>
+                                <th>GEOPECHE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Meteo peche</td>
+                                <td class="comparison__highlight"><span class="check">&#10003;</span></td>
+                                <td><span class="check">&#10003;</span></td>
+                                <td><span class="cross">&#10007;</span></td>
+                            </tr>
+                            <tr>
+                                <td>Debits riviere</td>
+                                <td class="comparison__highlight"><span class="check">&#10003;</span></td>
+                                <td><span class="cross">&#10007;</span></td>
+                                <td><span class="cross">&#10007;</span></td>
+                            </tr>
+                            <tr>
+                                <td>Spots prives</td>
+                                <td class="comparison__highlight"><span class="check">&#10003;</span></td>
+                                <td><span class="cross">&#10007;</span> Publics</td>
+                                <td><span class="cross">&#10007;</span></td>
+                            </tr>
+                            <tr>
+                                <td>Mode hors-ligne</td>
+                                <td class="comparison__highlight"><span class="check">&#10003;</span></td>
+                                <td><span class="cross">&#10007;</span></td>
+                                <td><span class="cross">&#10007;</span> Webapp</td>
+                            </tr>
+                            <tr>
+                                <td>Donnees francaises</td>
+                                <td class="comparison__highlight"><span class="check">&#10003;</span></td>
+                                <td><span class="cross">&#10007;</span></td>
+                                <td><span class="check">&#10003;</span></td>
+                            </tr>
+                            <tr>
+                                <td>Carnet de touches</td>
+                                <td class="comparison__highlight"><span class="check">&#10003;</span></td>
+                                <td><span class="check">&#10003;</span></td>
+                                <td><span class="cross">&#10007;</span></td>
+                            </tr>
+                            <tr>
+                                <td>Prix</td>
+                                <td class="comparison__highlight"><strong>Gratuit</strong></td>
+                                <td>80$/an</td>
+                                <td>Gratuit</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partage de prise -->
+    <section class="share-feature">
+        <div class="container">
+            <div class="share-feature__layout">
+                <div class="share-feature__content">
+                    <h2 class="section-title">Partagez vos prises, pas vos spots</h2>
+                    <p>Generez une carte visuelle de votre prise aux couleurs de Walton. Photo, espece, poids, taille et conditions meteo — le tout dans un format pret a partager sur WhatsApp, Instagram ou SMS.</p>
+                    <ul class="share-feature__list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5dcaa5" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Vos coordonnees GPS ne sont <strong>jamais</strong> partagees
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5dcaa5" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Generation 100% locale sur votre telephone
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5dcaa5" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Choisissez les conditions a afficher
+                        </li>
+                    </ul>
+                </div>
+                <div class="share-feature__visual">
+                    <div class="share-card">
+                        <div class="share-card__photo">
+                            <div class="share-card__photo-placeholder">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                            </div>
+                        </div>
+                        <div class="share-card__info">
+                            <div class="share-card__row1">
+                                <span class="share-card__species">Truite fario</span>
+                                <span class="share-card__date">15 mars 2026 &middot; 07:42</span>
+                            </div>
+                            <div class="share-card__row2">
+                                <div class="share-card__measure">
+                                    <span class="share-card__value">1.2</span>
+                                    <span class="share-card__unit">kg</span>
+                                </div>
+                                <div class="share-card__sep"></div>
+                                <div class="share-card__measure">
+                                    <span class="share-card__value">42</span>
+                                    <span class="share-card__unit">cm</span>
+                                </div>
+                            </div>
+                            <div class="share-card__row3">
+                                <span class="share-card__pill"><span class="share-card__pill-label">temp</span> <span class="share-card__pill-value">8&deg;C</span></span>
+                                <span class="share-card__pill"><span class="share-card__pill-label">vent</span> <span class="share-card__pill-value">6 km/h</span></span>
+                                <span class="share-card__pill"><span class="share-card__pill-label">debit</span> <span class="share-card__pill-value">12.3 m&sup3;/s</span></span>
+                            </div>
+                            <div class="share-card__watermark">Walton</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Questions frequentes</h2>
+            </div>
+            <div class="faq__list">
+                <details class="faq__item">
+                    <summary class="faq__question">Walton est-il vraiment gratuit ?</summary>
+                    <p class="faq__answer">Oui, 100%. Pas de pub, pas de compte requis, pas de fonctionnalite cachee derriere un paywall. Toutes les fonctionnalites sont accessibles des l'installation.</p>
+                </details>
+                <details class="faq__item">
+                    <summary class="faq__question">Est-ce que mes spots sont partages avec d'autres utilisateurs ?</summary>
+                    <p class="faq__answer">Jamais. Vos spots sont stockes uniquement sur votre telephone. Ils ne sont envoyes sur aucun serveur et ne sont visibles par personne d'autre que vous.</p>
+                </details>
+                <details class="faq__item">
+                    <summary class="faq__question">L'application fonctionne-t-elle sans connexion internet ?</summary>
+                    <p class="faq__answer">Oui. Carte, spots et dernieres donnees meteo/Vigicrues sont disponibles hors-ligne. Vous pouvez aussi pre-telecharger des zones de carte pour un acces complet sans reseau.</p>
+                </details>
+                <details class="faq__item">
+                    <summary class="faq__question">Quelles techniques de peche sont supportees ?</summary>
+                    <p class="faq__answer">Walton couvre la peche a la truite, aux carnassiers (brochet, sandre, perche), a la carpe et la peche en mer du bord. Les filtres et categories sont adaptes a chaque pratique.</p>
+                </details>
+                <details class="faq__item">
+                    <summary class="faq__question">D'ou viennent les donnees meteo et de debit ?</summary>
+                    <p class="faq__answer">La meteo provient d'Open-Meteo (modeles Meteo-France). Les debits sont fournis par Vigicrues et Hub'Eau, les services officiels de surveillance des cours d'eau francais. La phase lunaire est calculee localement via la librairie suncalc.</p>
+                </details>
+                <details class="faq__item">
+                    <summary class="faq__question">Walton consomme-t-il beaucoup de batterie ?</summary>
+                    <p class="faq__answer">Non. Le GPS n'est utilise qu'en premier plan et un mode economique est active par defaut. L'objectif est de ne pas depasser 10% de batterie par heure d'utilisation.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telechargement -->
+    <section class="download" id="telechargement">
+        <div class="container">
+            <div class="download__content">
+                <h2 class="download__title">Pret a simplifier vos sorties peche ?</h2>
+                <p class="download__subtitle">Telechargez Walton gratuitement. Pas de compte, pas de pub, pas de piege.</p>
+                <div class="download__buttons">
+                    <a href="#" class="store-badge" aria-label="Telecharger sur l'App Store">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        <div>
+                            <small>Telecharger sur l'</small>
+                            <strong>App Store</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="store-badge" aria-label="Disponible sur Google Play">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c-.36-.17-.57-.47-.57-.87V1.11c0-.4.21-.7.57-.87L14.47 12 3.18 23.76zm1.06-22.27L16.41 12 4.24 22.51 15.36 12 4.24 1.49zm.88-.38l12.74 7.35L15.36 12 4.24 1.49l.88-.38zm13.75 7.82L6.52.82l8.84 11.18 3.51-3.09zm0 14.14L6.52 23.18l8.84-11.18 3.51 3.09z"/></svg>
+                        <div>
+                            <small>Disponible sur</small>
+                            <strong>Google Play</strong>
+                        </div>
+                    </a>
+                </div>
+                <p class="download__note">Disponible sur iOS et Android &middot; iOS 15+ / Android 10+</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <svg class="footer__logo" viewBox="0 0 32 32" width="28" height="28" fill="none">
+                        <circle cx="16" cy="16" r="16" fill="#5dcaa5"/>
+                        <path d="M10 22c2-4 4-8 6-6s4 6 6 2" stroke="#0a3d38" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="24" cy="12" r="2" fill="#0a3d38"/>
+                    </svg>
+                    <span>Walton</span>
+                </div>
+                <div class="footer__links">
+                    <a href="privacy.html">Politique de confidentialite</a>
+                    <a href="terms.html">Conditions d'utilisation</a>
+                    <a href="mailto:contact@walton-app.fr">Contact</a>
+                </div>
+                <p class="footer__copy">&copy; 2026 Walton. Concu en France pour les pecheurs francais.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
